@@ -25,11 +25,12 @@
 
         #overlay {
             background-color: rgba(245, 245, 245, 0.9);
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
             text-align: center;
             width: 60%;
             min-height: 300px;
+            height: max-content;
         }
 
         #greeting-container {
@@ -84,6 +85,9 @@
                 margin-bottom: 9%;
                 font-size: 1.3em;
             }
+            #greeting{
+                font-size: 1.2em;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap">
@@ -110,7 +114,7 @@
                 inputContainer.style.display = 'none';
                 greetingContainer.style.display = 'flex';
                 greetingContainer.style.fontWeight = "600";
-                greeting.innerText = `Feliz Ano Novo, ${name}! Você conseguirá tudo o que deseja, pois eu acredito em você 😊😊😊.`;
+                greeting.innerText = `Feliz Ano Novo, ${name} 👨‍💻👨‍💻👨‍💻\n\n Você conseguirá tudo o que deseja, pois eu acredito em você 😊😊😊.`;
             }
         }
     </script>
