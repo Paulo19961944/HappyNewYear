@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz 2024</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif; /* Adicionando a fonte Roboto */
+            color: #fff;
+            background: url('Fogos.gif') center center no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            color: #000;
+            font-size: 2em; /* Tamanho do título aumentado */
+            margin-bottom: 4%;
+        }
+
+        #overlay {
+            background-color: rgba(245, 245, 245, 0.9); /* Cor de fundo da div centralizada com transparência */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            min-height: 300px;
+        }
+
+        #greeting-container {
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #greeting {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #000; /* Cor do texto da saudação */
+        }
+        
+        input {
+            font-size: 1.2em;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            border: 1px solid #4caf50;
+            border-radius: 5px;
+            color: #333;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <!-- Adicionando a fonte Roboto diretamente do Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap">
+</head>
+<body>
+    <div id="overlay">
+        <div id="greeting-container">
+            <div id="greeting"></div>
+        </div>
+        <div id="input-container">
+            <h1>FELIZ 2024 - 👨‍💻👨‍💻👨‍💻</h1>
+            <input type="text" id="nameInput" placeholder="Seu Nome">
+            <button onclick="showGreeting()">Enviar</button>
+        </div>
+    </div>
+    <script>
+        function showGreeting() {
+            const name = document.getElementById('nameInput').value;
+            const greetingContainer = document.getElementById('greeting-container');
+            const greeting = document.getElementById('greeting');
+            const inputContainer = document.getElementById('input-container');
+
+            if (name.trim() !== '') {
+                inputContainer.style.display = 'none';
+                greetingContainer.style.display = 'flex';
+                greetingContainer.style.fontWeight = "600"
+                greeting.innerText = `Feliz Ano Novo, ${name}! Você conseguirá tudo o que deseja, pois eu acredito em você 😊😊😊.`;
+            }
+        }
+    </script>
+</body>
+</html>
