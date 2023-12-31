@@ -11,21 +11,20 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            overflow: hidden;
-            font-family: 'Roboto', sans-serif; /* Adicionando a fonte Roboto */
+            font-family: 'Roboto', sans-serif;
             color: #fff;
             background: url('Fogos.gif') center center no-repeat;
             background-size: cover;
         }
 
         h1 {
-            color: #000;
-            font-size: 2em; /* Tamanho do título aumentado */
+            font-size: 2em;
             margin-bottom: 4%;
+            color: #000;
         }
 
         #overlay {
-            background-color: rgba(245, 245, 245, 0.9); /* Cor de fundo da div centralizada com transparência */
+            background-color: rgba(245, 245, 245, 0.9);
             padding: 20px;
             border-radius: 10px;
             text-align: center;
@@ -49,9 +48,9 @@
         #greeting {
             font-size: 1.5em;
             margin-bottom: 20px;
-            color: #000; /* Cor do texto da saudação */
+            color: #000;
         }
-        
+
         input {
             font-size: 1.2em;
             padding: 10px;
@@ -61,6 +60,7 @@
             border-radius: 5px;
             color: #333;
             background: rgba(255, 255, 255, 0.8);
+            width: 50%;
         }
 
         button {
@@ -72,8 +72,20 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        @media screen and (max-width: 768px) {
+            #overlay {
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                margin-bottom: 9%;
+                font-size: 1.3em;
+            }
+        }
     </style>
-    <!-- Adicionando a fonte Roboto diretamente do Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap">
 </head>
 <body>
@@ -82,7 +94,7 @@
             <div id="greeting"></div>
         </div>
         <div id="input-container">
-            <h1>FELIZ 2024 - 👨‍💻👨‍💻👨‍💻</h1>
+            <h1>FELIZ 2024 -  👨‍💻👨‍💻👨‍💻</h1>
             <input type="text" id="nameInput" placeholder="Seu Nome">
             <button onclick="showGreeting()">Enviar</button>
         </div>
@@ -97,7 +109,7 @@
             if (name.trim() !== '') {
                 inputContainer.style.display = 'none';
                 greetingContainer.style.display = 'flex';
-                greetingContainer.style.fontWeight = "600"
+                greetingContainer.style.fontWeight = "600";
                 greeting.innerText = `Feliz Ano Novo, ${name}! Você conseguirá tudo o que deseja, pois eu acredito em você 😊😊😊.`;
             }
         }
